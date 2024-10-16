@@ -10,6 +10,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 
 @Entity
 @Table(name = "products")
@@ -27,6 +28,9 @@ public class Product {
 
     @Column(name = "create_at")
     private LocalDate createAt;
+
+    @Transient
+    private int port;
 
     public Long getId() {
         return id;
@@ -60,4 +64,14 @@ public class Product {
         this.createAt = createAt;
     }
 
+    public int getPort() {
+        return port;
+    }
+
+    public void setPort(int port) {
+        this.port = port;
+    }
+
+
+    
 }
