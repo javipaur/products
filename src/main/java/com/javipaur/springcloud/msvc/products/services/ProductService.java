@@ -8,8 +8,6 @@ import com.javipaur.springcloud.msvc.products.entities.Product;
 public interface ProductService {
 
     List<Product> findAll();
-    
-    Optional<Product> findById(Long id);
 
-    
+    Optional<Product> findById(Long id);
 }

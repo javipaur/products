@@ -1,7 +1,5 @@
 package com.javipaur.springcloud.msvc.products.entities;
 
-
-
 import java.time.LocalDate;
 
 import jakarta.persistence.Column;
@@ -20,10 +18,8 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "name")
     private String name;
 
-    @Column(name = "price")
     private Double price;
 
     @Column(name = "create_at")
@@ -71,7 +67,6 @@ public class Product {
     public void setPort(int port) {
         this.port = port;
     }
-
 
     
 }
